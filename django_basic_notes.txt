@@ -1,0 +1,40 @@
+Django
+
+.\django_env\Scripts\activate 
+
+to start new project follow the step listed below
+
+1. Open cmd
+2. type-> django-admin startproject project_name
+3. if you want to create multiple apps under a project then type
+     python manage.py startapp app_name
+
+Steps for migrations
+1. add code in models.py
+2. python manage.py makemigrations
+3. python manage.py migrate (It will make changes in db)
+4. register your models in admin.py
+5. Config your apps in settings.py installed apps list
+
+
+1. create endpoints in urls.py
+2. create functions in views.py which have called in urls.py(return render html templates)
+3. call a class in views.py which we have made in models.py
+4. in settings.py add a 'templates' under TEMPLATES/DIRS
+5. Register STATIC folder path in seeti
+--> STATIC_URL = 'static/'
+    STATICFILES_DIRS = [os.path.join(BASE_DIR,  "static"),]
+
+
+
+Flow in Django website 
+
+urls.py --> views.py --> models.py/ html file
+Superuser 
+
+python manage.py createsuperuser
+
+
+
+
+
